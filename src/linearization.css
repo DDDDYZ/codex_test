@@ -1,0 +1,105 @@
+.lin-heading {
+  display: flex;
+  align-items: start;
+  justify-content: space-between;
+  gap: 15px;
+}
+.lin-heading p {
+  margin-top: 0;
+}
+.lin-tag {
+  border: 1px solid var(--border);
+  border-radius: 15px;
+  white-space: nowrap;
+  font-size: 10px;
+  color: var(--muted);
+  padding: 5px 8px;
+}
+.lin-controls {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 22px;
+  margin: 18px 0 10px;
+}
+.lin-controls label {
+  font-size: 12px;
+}
+.lin-controls strong {
+  float: right;
+  color: var(--accent);
+  font-weight: 500;
+}
+.lin-controls input {
+  display: block;
+  width: 100%;
+  accent-color: var(--accent);
+  margin: 10px 0 5px;
+}
+.lin-controls label > span {
+  display: block;
+  color: var(--muted);
+  font-size: 10px;
+}
+.lin-controls label > span > span {
+  float: right;
+}
+.lin-presets {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin-bottom: 18px;
+}
+.lin-presets button {
+  font-size: 11px;
+  padding: 6px 10px;
+}
+.lin-metrics {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 10px;
+}
+.lin-metrics div {
+  padding: 11px;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  background: var(--soft);
+}
+.lin-metrics span {
+  display: block;
+  color: var(--muted);
+  font-size: 10px;
+}
+.lin-metrics strong {
+  font-size: 14px;
+  font-weight: 500;
+  display: block;
+  margin-top: 6px;
+}
+.lin-chart {
+  height: 275px;
+  margin-top: 17px;
+}
+.lin-error-chart {
+  height: 210px;
+}
+.linearization-demo .formula {
+  max-width: 100%;
+}
+@media (max-width: 620px) {
+  .lin-controls {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+  .lin-metrics {
+    grid-template-columns: 1fr;
+  }
+  .lin-tag {
+    display: none;
+  }
+  .lin-chart {
+    height: 250px;
+  }
+  .lin-error-chart {
+    height: 190px;
+  }
+}

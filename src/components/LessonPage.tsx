@@ -1,4 +1,4 @@
-import type {LearningLevel} from "../content/questions";
+import type { LearningLevel } from "../content/questions";
 import { useState, type ReactNode } from "react";
 import { Formula } from "./Formula";
 export interface StudyLesson {
@@ -58,20 +58,33 @@ export default function LessonPage({
   const ready = taskDone && predictionCorrect && quizMastered === quizTotal;
   return (
     <>
-      <section className="lesson-intro">
+      <section className="lesson-intro" data-lesson-id={lesson.id}>
         <div className="eyebrow">
           LEVEL 0{level} / LESSON 0{lessonNumber}
         </div>
         <h1>
           {lesson.title}
           <span className="badge">
-            {level === 1 ? "飞行基础" : "飞行性能"} · 引导实验
+            {
+              [
+                "飞行基础",
+                "飞行性能",
+                "静稳定与配平",
+                "运动方程",
+                "动态模态",
+                "飞行控制",
+              ][level - 1]
+            }{" "}
+            · 引导实验
           </span>
         </h1>
         <p>{lesson.objective}</p>
-        {level === 2 && (
+        {level > 1 && (
           <p className="prerequisite">
-            前置知识：四力平衡、升力方程。尚未学过时，可先完成 Level 1 第一课。
+            推荐先学习 Level {level - 1} 的核心知识。
+            {level >= 4
+              ? "此阶段还需要微积分、线性代数和常微分方程基础。"
+              : "学习顺序见学习路径；也可以自由探索参数。"}
           </p>
         )}
         <div className="mode-toggle">

@@ -158,3 +158,13 @@
     font-size: 10px;
   }
 }
+
+.lab-switcher {
+  flex-wrap: wrap;
+}
+.lesson-content article {
+  min-width: 0;
+}
+.lesson-content .formula {
+  max-width: 100%;
+}

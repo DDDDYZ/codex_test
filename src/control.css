@@ -1,0 +1,325 @@
+.control-lab {
+  width: 100%;
+}
+.ctl-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 18px;
+}
+.ctl-heading h2 {
+  margin: 5px 0;
+}
+.ctl-model-tag {
+  padding: 7px 11px;
+  border: 1px solid var(--border);
+  border-radius: 20px;
+  color: var(--muted);
+  font-size: 11px;
+  white-space: nowrap;
+}
+.ctl-tabs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  border-bottom: 1px solid var(--border);
+  padding-bottom: 14px;
+}
+.ctl-tabs button[aria-selected="true"] {
+  border-color: var(--accent);
+  background: var(--soft);
+  color: var(--accent);
+}
+.ctl-intro {
+  font-size: 13px;
+  line-height: 1.9;
+  margin: 18px 0;
+  max-width: 1060px;
+}
+.ctl-layout {
+  display: grid;
+  grid-template-columns: 245px minmax(0, 1fr);
+  gap: 22px;
+  align-items: start;
+}
+.ctl-controls {
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 18px;
+  background: var(--panel);
+}
+.ctl-controls h3 {
+  font-size: 14px;
+  margin: 2px 0 18px;
+}
+.ctl-controls h3:not(:first-child) {
+  padding-top: 17px;
+  border-top: 1px solid var(--border);
+  margin-top: 20px;
+}
+.ctl-controls small,
+.ctl-output > small {
+  font-size: 11px;
+  line-height: 1.9;
+  display: block;
+}
+.ctl-controls > button {
+  width: 100%;
+  font-size: 11px;
+  margin-top: 4px;
+}
+.ctl-input {
+  margin-bottom: 17px;
+}
+.ctl-input label {
+  font-size: 11px;
+  display: block;
+}
+.ctl-input label > span {
+  float: right;
+  color: var(--muted);
+}
+.ctl-input input[type="number"] {
+  width: 100%;
+  color: var(--text);
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: 5px;
+  padding: 7px 9px;
+  margin: 7px 0 6px;
+}
+.ctl-input input[type="range"] {
+  width: 100%;
+  margin: 0;
+  accent-color: var(--accent);
+}
+.ctl-input input[aria-invalid="true"] {
+  border-color: #b76139;
+}
+.ctl-input small {
+  color: #9d513a;
+}
+.ctl-select {
+  display: block;
+  font-size: 11px;
+  margin-bottom: 18px;
+}
+.ctl-select select {
+  display: block;
+  width: 100%;
+  margin-top: 7px;
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: 5px;
+  padding: 8px;
+  color: var(--text);
+}
+.ctl-toggle {
+  display: flex;
+  gap: 7px;
+  align-items: center;
+  font-size: 12px;
+  margin: 0 0 13px;
+}
+.ctl-toggle input {
+  accent-color: var(--accent);
+}
+.ctl-output {
+  min-width: 0;
+}
+.ctl-runbar {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin-bottom: 14px;
+}
+.ctl-runbar button {
+  font-size: 11px;
+  padding: 8px 11px;
+}
+.ctl-runbar .primary {
+  color: white;
+  background: var(--accent);
+  border-color: var(--accent);
+}
+.ctl-runbar label,
+.ctl-runbar > span {
+  font-size: 11px;
+  color: var(--muted);
+}
+.ctl-runbar select {
+  padding: 6px;
+  border: 1px solid var(--border);
+  color: var(--text);
+  background: var(--panel);
+  border-radius: 5px;
+}
+.ctl-metrics {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 9px;
+}
+.ctl-metrics > span {
+  border: 1px solid var(--border);
+  background: var(--panel);
+  border-radius: 8px;
+  padding: 12px;
+  font-size: 10px;
+  color: var(--muted);
+}
+.ctl-metrics strong {
+  display: block;
+  color: var(--text);
+  font-size: 16px;
+  margin-top: 8px;
+  font-weight: 600;
+  overflow-wrap: anywhere;
+}
+.ctl-status {
+  font-size: 10px;
+  line-height: 1.7;
+  background: var(--soft);
+  border-radius: 6px;
+  padding: 9px 12px;
+  margin: 12px 0;
+}
+.ctl-warning {
+  font-size: 12px;
+  line-height: 1.8;
+  background: #fff4e9;
+  color: #905130;
+  border: 1px solid #e7c8ad;
+  border-radius: 8px;
+  padding: 12px;
+  margin: 12px 0;
+}
+.ctl-attitude {
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  background: var(--panel);
+  overflow: hidden;
+  margin-bottom: 14px;
+}
+.ctl-visual-label {
+  padding: 12px 14px 0;
+  font-size: 10px;
+  color: var(--muted);
+}
+.ctl-attitude svg {
+  width: 100%;
+  height: 200px;
+  display: block;
+}
+.ctl-visual-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+}
+.ctl-chart-card {
+  background: var(--panel);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 14px 12px;
+  margin-bottom: 14px;
+}
+.ctl-chart-card h4 {
+  font-size: 12px;
+  margin: 0 0 12px;
+  font-weight: 500;
+}
+.ctl-chart {
+  width: 100%;
+  height: 250px;
+}
+.ctl-snapshot {
+  font-size: 11px;
+  line-height: 1.6;
+  border-left: 3px solid #8a74b3;
+  padding-left: 12px;
+}
+.ctl-snapshot button {
+  font-size: 10px;
+  padding: 5px 9px;
+  margin-left: 8px;
+}
+.ctl-task {
+  margin: 14px 0 8px;
+  color: var(--accent);
+  border-color: var(--accent);
+  font-size: 12px;
+}
+.control-lab .formula {
+  font-size: 13px;
+  overflow-x: auto;
+}
+@media (max-width: 1050px) {
+  .ctl-layout {
+    grid-template-columns: 215px minmax(0, 1fr);
+    gap: 14px;
+  }
+  .ctl-metrics {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .ctl-visual-grid {
+    grid-template-columns: 1fr;
+  }
+}
+@media (max-width: 720px) {
+  .ctl-heading {
+    align-items: start;
+  }
+  .ctl-heading h2 {
+    font-size: 23px;
+  }
+  .ctl-model-tag {
+    display: none;
+  }
+  .ctl-layout {
+    grid-template-columns: 1fr;
+  }
+  .ctl-controls {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 12px 16px;
+  }
+  .ctl-controls h3,
+  .ctl-controls > small,
+  .ctl-controls > button {
+    grid-column: 1 / -1;
+  }
+  .ctl-controls h3 {
+    margin-bottom: 2px;
+  }
+  .ctl-controls h3:not(:first-child) {
+    margin-top: 4px;
+    padding-top: 12px;
+  }
+  .ctl-input {
+    margin-bottom: 0;
+  }
+  .ctl-toggle {
+    align-self: start;
+  }
+  .ctl-chart {
+    height: 235px;
+  }
+  .ctl-tabs button {
+    font-size: 11px;
+    padding: 8px 10px;
+  }
+}
+@media (max-width: 390px) {
+  .ctl-controls {
+    grid-template-columns: 1fr;
+  }
+  .ctl-controls h3,
+  .ctl-controls > small,
+  .ctl-controls > button {
+    grid-column: auto;
+  }
+  .ctl-metrics strong {
+    font-size: 14px;
+  }
+}

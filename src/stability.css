@@ -1,0 +1,427 @@
+.stability-lab {
+  padding: 24px 0 40px;
+  scroll-margin-top: 20px;
+}
+.stability-tabs {
+  display: flex;
+  border-bottom: 1px solid var(--border);
+}
+.stability-tabs button {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  background: transparent;
+  border: 0;
+  border-radius: 0;
+  padding: 15px 20px;
+  font-size: 13px;
+}
+.stability-tabs button > span {
+  font: 11px monospace;
+  color: var(--muted);
+}
+.stability-tabs button.active {
+  color: var(--accent);
+  border-bottom: 2px solid var(--accent);
+  background: var(--soft);
+}
+.stability-grid {
+  display: grid;
+  grid-template-columns: 235px minmax(0, 1fr) 275px;
+  background: var(--panel);
+  border: 1px solid var(--border);
+  border-top: 0;
+  border-radius: 0 0 10px 10px;
+  overflow: hidden;
+}
+.stability-theory {
+  padding: 26px 20px;
+  border-right: 1px solid var(--border);
+  min-width: 0;
+}
+.stability-theory h3 {
+  font-size: 23px;
+}
+.stability-theory p {
+  font-size: 12px;
+  line-height: 1.9;
+}
+.stability-theory .formula {
+  padding: 14px 0;
+  font-size: 12px;
+  overflow-x: auto;
+}
+.stability-theory .model-note {
+  margin: 22px 0;
+}
+.stability-model-details {
+  font-size: 11px;
+  margin: 20px 0;
+}
+.stability-model-details summary {
+  color: var(--accent);
+  cursor: pointer;
+  line-height: 1.8;
+}
+.stability-model-details p {
+  font-size: 10px;
+}
+.stability-workspace {
+  padding: 14px;
+  min-width: 0;
+}
+.stability-diagram {
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  background: linear-gradient(160deg, var(--soft), var(--bg));
+}
+.stability-diagram-heading {
+  display: flex;
+  justify-content: space-between;
+  gap: 8px;
+  padding: 14px 16px;
+  color: var(--muted);
+  font-size: 10px;
+}
+.stability-diagram-heading > span:first-child {
+  color: var(--accent);
+}
+.stability-diagram svg {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+.stability-diagram > p {
+  margin: 0;
+  padding: 11px 14px;
+  border-top: 1px solid var(--border);
+  color: var(--muted);
+  font-size: 10px;
+  line-height: 1.7;
+}
+.stability-status {
+  font-size: 11px;
+  line-height: 1.8;
+  padding: 2px;
+  margin: 12px 0;
+}
+.stability-status.warning {
+  padding: 10px 12px;
+  border-radius: 6px;
+}
+.stability-readouts {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1px;
+  background: var(--border);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  overflow: hidden;
+  margin: 12px 0;
+}
+.stability-readouts > div {
+  background: var(--panel);
+  padding: 12px 14px;
+  min-width: 0;
+}
+.stability-readouts small {
+  display: block;
+  font-size: 10px;
+  margin-bottom: 7px;
+}
+.stability-readouts strong {
+  font:
+    500 23px/1 ui-monospace,
+    Consolas,
+    monospace;
+}
+.stability-readouts em {
+  color: var(--muted);
+  font-size: 10px;
+  font-style: normal;
+  margin-left: 6px;
+}
+.stability-caption {
+  font-size: 10px;
+  line-height: 1.8;
+  margin: 9px 3px 15px;
+}
+.stability-tools {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin: 17px 0;
+}
+.stability-tools > span {
+  flex-basis: 100%;
+  color: var(--muted);
+  font-size: 10px;
+  margin-bottom: 3px;
+}
+.stability-tools button {
+  padding: 7px 9px;
+  font-size: 10px;
+}
+.stability-chart-card {
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  margin: 12px 0;
+  padding: 14px 8px 8px;
+}
+.stability-chart-card h4 {
+  margin: 0 8px 12px;
+  font-size: 12px;
+  font-weight: 500;
+}
+.stability-chart {
+  height: 240px;
+  min-width: 0;
+}
+.stability-comparison {
+  padding: 14px;
+  margin-top: 20px;
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+}
+.stability-comparison-heading {
+  display: flex;
+  justify-content: space-between;
+  gap: 8px;
+  align-items: center;
+}
+.stability-comparison-heading h4 {
+  margin: 0;
+  font-size: 12px;
+  font-weight: 500;
+}
+.stability-comparison-heading button {
+  font-size: 10px;
+  padding: 5px 8px;
+}
+.stability-comparison p {
+  font-size: 10px;
+  line-height: 1.8;
+}
+.stability-table-scroll {
+  overflow-x: auto;
+}
+.stability-comparison table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 10px;
+  text-align: right;
+}
+.stability-comparison th,
+.stability-comparison td {
+  padding: 9px 5px;
+  border-bottom: 1px solid var(--border);
+  white-space: nowrap;
+}
+.stability-comparison th {
+  color: var(--muted);
+  font-weight: 500;
+}
+.stability-comparison th:first-child {
+  text-align: left;
+}
+.stability-parameters {
+  padding: 22px 20px;
+  border-left: 1px solid var(--border);
+}
+.stability-parameter-heading {
+  display: flex;
+  justify-content: space-between;
+  gap: 8px;
+  align-items: center;
+  margin-bottom: 14px;
+}
+.stability-parameter-heading h3 {
+  margin: 0;
+  font-size: 16px;
+}
+.stability-parameter-heading > span {
+  color: var(--muted);
+  font-size: 9px;
+}
+.stability-parameter {
+  display: grid;
+  grid-template-columns: 1fr 76px;
+  gap: 10px 7px;
+  align-items: center;
+  padding: 12px 0;
+}
+.stability-parameter label {
+  font-size: 11px;
+  line-height: 1.5;
+}
+.stability-parameter label small {
+  display: block;
+  margin-top: 3px;
+  font-size: 9px;
+}
+.stability-parameter input[type="number"] {
+  width: 100%;
+  min-width: 0;
+  padding: 7px 5px;
+  font:
+    11px ui-monospace,
+    Consolas,
+    monospace;
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  background: var(--bg);
+  color: var(--text);
+}
+.stability-parameter input[aria-invalid="true"] {
+  border-color: #c27b45;
+}
+.stability-parameter input[type="range"] {
+  grid-column: 1 / -1;
+  width: 100%;
+  accent-color: var(--accent);
+  height: 5px;
+  margin: 3px 0;
+  cursor: pointer;
+}
+.stability-range-labels {
+  grid-column: 1 / -1;
+  display: flex;
+  justify-content: space-between;
+  font:
+    9px ui-monospace,
+    Consolas,
+    monospace;
+  color: var(--muted);
+}
+.stability-context {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 10px;
+  border-top: 1px solid var(--border);
+  padding: 15px 0;
+  margin-top: 16px;
+  font-size: 10px;
+}
+.stability-context > span {
+  color: var(--muted);
+}
+.stability-context > strong {
+  font:
+    500 10px ui-monospace,
+    Consolas,
+    monospace;
+}
+.stability-task {
+  padding: 15px;
+  margin-top: 18px;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  background: var(--bg);
+}
+.stability-task p {
+  font-size: 11px;
+  line-height: 1.8;
+  margin: 12px 0;
+}
+.stability-task > span {
+  display: block;
+  font-size: 10px;
+  color: var(--muted);
+  margin-bottom: 12px;
+}
+.stability-task button {
+  width: 100%;
+  padding: 9px 6px;
+  font-size: 11px;
+}
+.stability-task small {
+  display: block;
+  margin-top: 12px;
+  font-size: 10px;
+}
+.stability-task.ready {
+  border-color: #71a998;
+  background: var(--soft);
+}
+.stability-task.ready > span {
+  color: var(--accent);
+}
+.stability-parameters .warning {
+  padding: 10px;
+  font-size: 11px;
+  line-height: 1.8;
+}
+@media (max-width: 1160px) {
+  .stability-grid {
+    grid-template-columns: minmax(0, 1fr) 260px;
+  }
+  .stability-theory {
+    grid-column: 1 / -1;
+    border-right: 0;
+    border-bottom: 1px solid var(--border);
+    padding: 22px 25px;
+  }
+  .stability-theory h3 {
+    font-size: 22px;
+  }
+  .stability-theory .model-note {
+    margin: 15px 0;
+  }
+  .stability-theory .formula {
+    padding: 10px 0;
+  }
+}
+@media (max-width: 720px) {
+  .stability-lab .section-heading {
+    align-items: flex-start;
+    gap: 10px;
+  }
+  .stability-lab h2 {
+    font-size: 23px;
+  }
+  .stability-lab .badge {
+    white-space: nowrap;
+    font-size: 10px;
+    margin-top: 8px;
+    padding: 5px 8px;
+  }
+  .stability-tabs button {
+    flex: 1;
+    justify-content: center;
+    padding: 13px 8px;
+    font-size: 11px;
+    gap: 5px;
+  }
+  .stability-grid {
+    display: flex;
+    flex-direction: column;
+  }
+  .stability-theory {
+    padding: 21px 18px;
+  }
+  .stability-workspace {
+    padding: 12px;
+  }
+  .stability-parameters {
+    padding: 21px 20px;
+    border-left: 0;
+    border-top: 1px solid var(--border);
+  }
+  .stability-parameter {
+    grid-template-columns: 1fr 90px;
+  }
+  .stability-readouts > div {
+    padding: 12px;
+  }
+  .stability-readouts strong {
+    font-size: 21px;
+  }
+  .stability-diagram-heading {
+    font-size: 9px;
+    padding: 12px;
+  }
+  .stability-chart {
+    height: 220px;
+  }
+}

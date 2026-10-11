@@ -1,0 +1,428 @@
+.dynamics-lab {
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: 44px 28px 72px;
+}
+.dyn-heading {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 20px;
+}
+.dyn-heading h2 {
+  margin: 12px 0 8px;
+  font-size: 27px;
+}
+.dyn-heading p {
+  max-width: 690px;
+  margin: 0;
+  font-size: 13px;
+}
+.dyn-badge {
+  border: 1px solid var(--border);
+  padding: 7px 10px;
+  border-radius: 20px;
+  color: var(--muted);
+  font-size: 11px;
+  white-space: nowrap;
+}
+.dyn-tabs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 7px;
+  margin: 26px 0 22px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid var(--border);
+}
+.dyn-tabs button {
+  font-size: 12px;
+}
+.dyn-tabs button.selected,
+.dyn-toolbar button.selected {
+  color: var(--accent);
+  border-color: var(--accent);
+  background: var(--soft);
+}
+.dyn-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 274px;
+  gap: 22px;
+  align-items: start;
+}
+.dyn-main {
+  min-width: 0;
+}
+.dyn-card,
+.dyn-chart-card {
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  background: var(--panel);
+  padding: 20px;
+  margin-bottom: 16px;
+  min-width: 0;
+}
+.dyn-card h3 {
+  font-size: 15px;
+  margin: 0 0 10px;
+}
+.dyn-card p {
+  margin: 10px 0 0;
+  font-size: 12px;
+  line-height: 1.85;
+}
+.dyn-card .formula {
+  overflow-x: auto;
+  font-size: 13px;
+  margin: 14px 0;
+}
+.dyn-card .katex-display {
+  margin: 0.7em 0;
+}
+.dyn-caption {
+  color: var(--muted);
+  font-size: 11px !important;
+  line-height: 1.8;
+}
+.dyn-parameters {
+  background: var(--panel);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 20px;
+}
+.dyn-parameter-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 18px;
+}
+.dyn-parameter-heading h3 {
+  font-size: 14px;
+  margin: 0;
+}
+.dyn-parameter-heading button {
+  font-size: 10px;
+  padding: 5px 8px;
+}
+.dyn-parameter {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 72px;
+  align-items: center;
+  gap: 10px;
+  padding: 15px 0;
+  border-top: 1px solid var(--border);
+}
+.dyn-parameter label {
+  display: block;
+  font-size: 11px;
+  line-height: 1.6;
+}
+.dyn-parameter label small {
+  display: block;
+  font-size: 10px;
+}
+.dyn-parameter input[type="number"] {
+  width: 72px;
+  border: 1px solid var(--border);
+  border-radius: 5px;
+  background: var(--bg);
+  color: var(--text);
+  padding: 6px 5px;
+  font-size: 12px;
+}
+.dyn-parameter input[aria-invalid="true"] {
+  border-color: #be8150;
+}
+.dyn-parameter input[type="range"] {
+  grid-column: 1 / -1;
+  width: 100%;
+  accent-color: var(--accent);
+  height: 14px;
+}
+.dyn-range {
+  grid-column: 1 / -1;
+  display: flex;
+  justify-content: space-between;
+  color: var(--muted);
+  font-size: 9px;
+  margin-top: -7px;
+}
+.dyn-context {
+  display: grid;
+  gap: 6px;
+  border-top: 1px solid var(--border);
+  padding: 17px 0;
+  font-size: 11px;
+  color: var(--muted);
+}
+.dyn-context strong {
+  color: var(--text);
+  font-weight: 500;
+}
+.dyn-context p {
+  margin: 2px 0 5px;
+  font-size: 11px;
+  line-height: 1.8;
+}
+.dyn-task {
+  border: 1px solid var(--border);
+  border-radius: 7px;
+  padding: 14px;
+  background: var(--bg);
+}
+.dyn-task.ready {
+  border-color: #92bdb7;
+  background: var(--soft);
+}
+.dyn-task p {
+  font-size: 11px;
+  line-height: 1.8;
+  margin: 9px 0;
+}
+.dyn-task span {
+  display: block;
+  font-size: 10px;
+  color: var(--accent);
+  margin-bottom: 12px;
+}
+.dyn-task button {
+  width: 100%;
+  font-size: 11px;
+}
+.dyn-task small {
+  display: block;
+  margin-top: 9px;
+  line-height: 1.7;
+  font-size: 10px;
+}
+.dyn-toolbar,
+.dyn-export {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 7px;
+  align-items: center;
+  margin: 17px 0;
+}
+.dyn-toolbar button,
+.dyn-export button {
+  font-size: 11px;
+  padding: 8px 10px;
+}
+.dyn-toolbar label,
+.dyn-phase-selector label {
+  font-size: 11px;
+  color: var(--muted);
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+.dyn-toolbar select,
+.dyn-phase-selector select {
+  font-size: 11px;
+  background: var(--panel);
+  color: var(--text);
+  border: 1px solid var(--border);
+  border-radius: 5px;
+  padding: 5px;
+}
+.dyn-status {
+  display: flex;
+  gap: 10px 18px;
+  flex-wrap: wrap;
+  padding: 12px 15px;
+  font-size: 11px;
+  border: 1px solid var(--border);
+  background: var(--panel);
+  border-radius: 6px;
+  align-items: center;
+  margin-bottom: 15px;
+}
+.dyn-status strong {
+  font-size: 14px;
+  font-weight: 500;
+}
+.dyn-status span {
+  color: var(--muted);
+}
+.dyn-status .dyn-stability.stable {
+  color: var(--accent);
+}
+.dyn-status .dyn-stability.unstable {
+  color: #be8150;
+}
+.dyn-status .dyn-stability.marginal {
+  color: #398aac;
+}
+.dyn-state-grid,
+.dyn-vector-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 8px;
+  margin-bottom: 16px;
+}
+.dyn-state-grid div,
+.dyn-vector-grid div {
+  background: var(--soft);
+  border: 1px solid var(--border);
+  padding: 11px;
+  border-radius: 6px;
+  min-width: 0;
+}
+.dyn-state-grid span,
+.dyn-vector-grid span {
+  display: block;
+  font-size: 10px;
+  color: var(--muted);
+}
+.dyn-state-grid strong,
+.dyn-vector-grid strong {
+  display: block;
+  font-size: 14px;
+  margin-top: 7px;
+  font-weight: 500;
+  overflow-wrap: anywhere;
+}
+.dyn-vector-grid {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+.dyn-vector-grid strong {
+  font-size: 11px;
+}
+.dyn-charts {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  gap: 16px;
+}
+.dyn-chart-card {
+  padding: 15px 9px 12px;
+}
+.dyn-chart-card h4 {
+  font-size: 12px;
+  font-weight: 500;
+  margin: 0 0 12px;
+  padding-left: 5px;
+}
+.dyn-chart-card p {
+  margin: 5px 6px 0;
+}
+.dyn-chart {
+  height: 247px;
+}
+.dyn-eigen-plane svg,
+.dyn-phase {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+.dyn-phase-selector {
+  display: flex;
+  gap: 10px;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  align-items: center;
+  margin: 0 0 12px;
+}
+.dyn-phase-selector > span {
+  font-size: 10px;
+  color: var(--muted);
+}
+.dyn-table-scroll {
+  overflow-x: auto;
+}
+.dyn-table-scroll table {
+  border-collapse: collapse;
+  width: 100%;
+  font-size: 11px;
+  white-space: nowrap;
+}
+.dyn-table-scroll th,
+.dyn-table-scroll td {
+  text-align: left;
+  border-bottom: 1px solid var(--border);
+  padding: 10px 8px;
+  font-weight: 400;
+}
+.dyn-table-scroll thead {
+  color: var(--muted);
+}
+.dyn-table-scroll tbody th {
+  font-weight: 500;
+}
+.dyn-limit {
+  padding: 10px 14px;
+  background: #fff5e8;
+  color: #95613a;
+  border-radius: 6px;
+  font-size: 11px;
+}
+.dyn-quaternion {
+  display: block;
+  overflow-wrap: anywhere;
+  font-size: 11px;
+  line-height: 1.8;
+  background: var(--soft);
+  padding: 10px;
+  border-radius: 5px;
+}
+.dyn-coordinate-scene {
+  margin-bottom: 16px;
+}
+.dyn-coordinate-scene .scene {
+  height: 360px;
+}
+@media (max-width: 1000px) {
+  .dyn-layout {
+    grid-template-columns: minmax(0, 1fr) 245px;
+    gap: 16px;
+  }
+  .dyn-parameters {
+    padding: 15px;
+  }
+  .dyn-charts {
+    grid-template-columns: minmax(0, 1fr);
+  }
+  .dyn-chart {
+    height: 270px;
+  }
+  .dyn-eigen-plane svg,
+  .dyn-phase {
+    max-height: 280px;
+  }
+}
+@media (max-width: 760px) {
+  .dynamics-lab {
+    padding: 30px 18px 50px;
+  }
+  .dyn-layout {
+    grid-template-columns: minmax(0, 1fr);
+  }
+  .dyn-heading h2 {
+    font-size: 22px;
+  }
+  .dyn-badge {
+    display: none;
+  }
+  .dyn-parameters {
+    order: -1;
+  }
+  .dyn-parameter {
+    padding: 11px 0;
+  }
+  .dyn-state-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .dyn-vector-grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+  .dyn-coordinate-scene .scene {
+    height: 310px;
+  }
+  .dyn-card {
+    padding: 16px;
+  }
+  .dyn-status {
+    gap: 9px;
+  }
+  .dyn-toolbar {
+    gap: 6px;
+  }
+}

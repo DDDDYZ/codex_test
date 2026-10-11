@@ -30,7 +30,7 @@ export const levels = [
       "俯仰力矩与尾翼",
       "纵向配平",
     ],
-    available: false,
+    available: true,
   },
   {
     name: "飞机运动方程",
@@ -41,7 +41,7 @@ export const levels = [
       "牛顿—欧拉与六自由度",
       "小扰动与线性化",
     ],
-    available: false,
+    available: true,
   },
   {
     name: "飞机动稳定性",
@@ -52,7 +52,7 @@ export const levels = [
       "横航向模态",
       "特征值、阻尼与频率",
     ],
-    available: false,
+    available: true,
   },
   {
     name: "飞行控制与综合仿真",
@@ -63,7 +63,7 @@ export const levels = [
       "风扰动与阵风",
       "综合飞行仿真",
     ],
-    available: false,
+    available: true,
   },
 ];
 export const lesson = {

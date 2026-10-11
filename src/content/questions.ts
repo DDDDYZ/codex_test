@@ -1,3 +1,7 @@
+import { stabilityQuestions } from "./phase3";
+import { dynamicsQuestions } from "./phase4";
+import { controlQuestions } from "./phase5";
+
 export type LearningLevel = 1 | 2 | 3 | 4 | 5 | 6;
 
 interface QuestionBase {
@@ -24,7 +28,7 @@ export interface NumericQuestion extends QuestionBase {
 export type Question = ChoiceQuestion | NumericQuestion;
 
 /** Stable IDs preserve the original four exercise results during migration. */
-export const questionBank: Question[] = [
+const foundationPerformanceQuestions: Question[] = [
   {
     id: "balance",
     level: 1,
@@ -63,7 +67,8 @@ export const questionBank: Question[] = [
     level: 1,
     lessonId: "first-flight",
     kind: "numeric",
-    title: "假想参数 ρ = 1.225 kg/m³、V = 50 m/s、S = 16 m²、CL = 0.6，升力是多少 N？",
+    title:
+      "假想参数 ρ = 1.225 kg/m³、V = 50 m/s、S = 16 m²、CL = 0.6，升力是多少 N？",
     answer: 14700,
     tolerance: 1,
     unit: "N",
@@ -118,7 +123,8 @@ export const questionBank: Question[] = [
     level: 2,
     lessonId: "polar",
     kind: "numeric",
-    title: "假想极曲线 CD0 = 0.025、k = 0.055、CLmax = 1.4，最佳升阻比对应的 CL 是多少？",
+    title:
+      "假想极曲线 CD0 = 0.025、k = 0.055、CLmax = 1.4，最佳升阻比对应的 CL 是多少？",
     answer: 0.674199862463242,
     tolerance: 0.001,
     unit: "无量纲",
@@ -141,7 +147,8 @@ export const questionBank: Question[] = [
     level: 2,
     lessonId: "level-flight",
     kind: "numeric",
-    title: "假想飞机 m = 1000 kg、g = 9.80665 m/s²、ρ = 1.225 kg/m³、S = 16 m²，以 50 m/s 定常平飞。所需 CL 是多少？",
+    title:
+      "假想飞机 m = 1000 kg、g = 9.80665 m/s²、ρ = 1.225 kg/m³、S = 16 m²，以 50 m/s 定常平飞。所需 CL 是多少？",
     answer: 0.4002714285714286,
     tolerance: 0.0005,
     unit: "无量纲",
@@ -153,7 +160,8 @@ export const questionBank: Question[] = [
     level: 2,
     lessonId: "level-flight",
     kind: "choice",
-    title: "重量、密度与机翼面积固定，定常平飞的空速增加一倍，所需 CL 如何变化？",
+    title:
+      "重量、密度与机翼面积固定，定常平飞的空速增加一倍，所需 CL 如何变化？",
     options: ["变为四倍", "变为四分之一", "保持不变"],
     answer: 1,
     explanation:
@@ -164,7 +172,8 @@ export const questionBank: Question[] = [
     level: 2,
     lessonId: "level-flight",
     kind: "choice",
-    title: "本教学模型要在某一空速维持定常水平直线飞行，哪一组条件需要同时成立？",
+    title:
+      "本教学模型要在某一空速维持定常水平直线飞行，哪一组条件需要同时成立？",
     options: [
       "只要可用推力大于零",
       "只要 CLreq 不超过 CLmax",
@@ -180,11 +189,7 @@ export const questionBank: Question[] = [
     lessonId: "climb-glide",
     kind: "choice",
     title: "无推力定常直线滑翔，航迹角 γ 向上为正。哪组精确关系成立？",
-    options: [
-      "L = W，D = 0",
-      "L = W cos γ，D = −W sin γ",
-      "L = 0，D = W",
-    ],
+    options: ["L = W，D = 0", "L = W cos γ，D = −W sin γ", "L = 0，D = W"],
     answer: 1,
     explanation:
       "滑翔时 γ < 0。垂直航迹方向 L = W cos γ，沿航迹方向 0 − D = W sin γ，因此 D = −W sin γ > 0。",
@@ -194,7 +199,8 @@ export const questionBank: Question[] = [
     level: 2,
     lessonId: "climb-glide",
     kind: "numeric",
-    title: "假想飞机以空速 50 m/s 沿 5° 向上航迹定常爬升。爬升率是多少 m/s？（使用角度制）",
+    title:
+      "假想飞机以空速 50 m/s 沿 5° 向上航迹定常爬升。爬升率是多少 m/s？（使用角度制）",
     answer: 4.357787137382909,
     tolerance: 0.02,
     unit: "m/s",
@@ -206,7 +212,8 @@ export const questionBank: Question[] = [
     level: 2,
     lessonId: "climb-glide",
     kind: "numeric",
-    title: "无风、参数不变的定常直线滑翔，升阻比 L/D = 12。损失 1000 m 高度，可前进多少 m 水平距离？不计进近余量。",
+    title:
+      "无风、参数不变的定常直线滑翔，升阻比 L/D = 12。损失 1000 m 高度，可前进多少 m 水平距离？不计进近余量。",
     answer: 12000,
     tolerance: 10,
     unit: "m",
@@ -228,7 +235,8 @@ export const questionBank: Question[] = [
     level: 2,
     lessonId: "turn",
     kind: "numeric",
-    title: "假想飞机以空速 50 m/s、45° 倾侧保持高度协调转弯，g = 9.80665 m/s²。转弯半径是多少 m？",
+    title:
+      "假想飞机以空速 50 m/s、45° 倾侧保持高度协调转弯，g = 9.80665 m/s²。转弯半径是多少 m？",
     answer: 254.92905324448207,
     tolerance: 0.5,
     unit: "m",
@@ -240,12 +248,20 @@ export const questionBank: Question[] = [
     level: 2,
     lessonId: "turn",
     kind: "choice",
-    title: "重量、密度和构型不变，载荷因数由 1 增至 2，理论失速空速变为原来的多少倍？",
+    title:
+      "重量、密度和构型不变，载荷因数由 1 增至 2，理论失速空速变为原来的多少倍？",
     options: ["2 倍", "√2 倍", "1/√2 倍"],
     answer: 1,
     explanation:
       "Vs,n = Vs,1√n。两倍升力需求要求失速空速提高到 √2 ≈ 1.414 倍；不是两倍。",
   },
+];
+
+export const questionBank: Question[] = [
+  ...foundationPerformanceQuestions,
+  ...stabilityQuestions,
+  ...dynamicsQuestions,
+  ...controlQuestions,
 ];
 
 /** Accept finite decimal input only; blanks never become numeric zero. */

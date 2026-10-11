@@ -39,7 +39,7 @@ export default function Hero({
               06 <small>学习阶段</small>
             </span>
             <span>
-              07 <small>开放实验组</small>
+              15 <small>开放实验组</small>
             </span>
             <span>
               SI <small>科学计算体系</small>
