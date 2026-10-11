@@ -1,0 +1,2 @@
+# Keep batch scripts CRLF even in GitHub source archives.
+*.cmd -text whitespace=cr-at-eol
