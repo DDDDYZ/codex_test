@@ -19,7 +19,7 @@ export const levels = [
       "平飞、爬升与滑翔",
       "转弯与载荷因数",
     ],
-    available: false,
+    available: true,
   },
   {
     name: "静稳定性与配平",

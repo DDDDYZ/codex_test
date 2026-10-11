@@ -1,0 +1,160 @@
+.lesson-lab-label {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-top: 1px solid var(--border);
+  padding: 20px 0 0;
+  margin-top: 15px;
+}
+.lesson-lab-label span {
+  font-size: 11px;
+  color: var(--muted);
+}
+.prerequisite {
+  border-left: 2px solid var(--accent);
+  padding-left: 12px;
+}
+.lesson-task,
+.practice-link {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 24px;
+  border: 1px solid var(--border);
+  background: var(--panel);
+  border-radius: 8px;
+  padding: 25px;
+  margin: 20px 0;
+}
+.lesson-task h3 {
+  font-size: 16px;
+  line-height: 1.8;
+}
+.lesson-task p,
+.practice-link p {
+  font-size: 12px;
+  margin-bottom: 0;
+}
+.task-done {
+  color: var(--accent);
+  background: var(--soft);
+  border-color: var(--accent);
+}
+.practice-link {
+  background: var(--soft);
+  margin: 35px 0;
+}
+.practice-link h2 {
+  font-size: 23px;
+}
+.lesson-completion {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+.lesson-selector {
+  display: flex;
+  gap: 8px;
+  overflow: auto;
+  margin-top: 24px;
+  padding-bottom: 8px;
+}
+.lesson-selector button {
+  font-size: 12px;
+  white-space: nowrap;
+}
+.path-lesson-list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+  margin: 20px 0 35px;
+}
+.path-lesson-list button {
+  text-align: left;
+  padding: 22px;
+  background: var(--panel);
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+}
+.path-lesson-list strong {
+  font-size: 17px;
+}
+.path-lesson-list small {
+  line-height: 1.8;
+}
+.path-lesson-list .badge {
+  width: fit-content;
+}
+.header nav {
+  gap: 18px;
+}
+.practice-link button {
+  white-space: nowrap;
+}
+.path-metrics {
+  display: flex;
+  gap: 25px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.path-metrics strong {
+  color: var(--accent);
+}
+.lab-switcher {
+  display: flex;
+  gap: 10px;
+  margin: 20px 0;
+}
+.lab-switcher button {
+  font-size: 13px;
+}
+.lesson-content .prediction {
+  flex-wrap: wrap;
+}
+.lesson-content .prediction button {
+  line-height: 1.5;
+}
+.lesson-content .small {
+  line-height: 1.8;
+}
+@media (max-width: 800px) {
+  .path-lesson-list {
+    grid-template-columns: 1fr 1fr;
+  }
+  .header nav {
+    gap: 14px;
+  }
+  .lesson-task,
+  .practice-link {
+    padding: 20px;
+    flex-wrap: wrap;
+  }
+  .lesson-lab-label span {
+    display: none;
+  }
+  .lesson-content .derivation {
+    min-width: 0;
+  }
+}
+@media (max-width: 560px) {
+  .path-lesson-list {
+    grid-template-columns: 1fr;
+  }
+  .header nav {
+    gap: 12px;
+  }
+  .header nav button {
+    font-size: 11px;
+  }
+  .practice-link h2 {
+    font-size: 20px;
+  }
+  .lab-switcher button {
+    font-size: 11px;
+    padding: 9px;
+  }
+  .lesson-task .badge {
+    font-size: 10px;
+  }
+}
